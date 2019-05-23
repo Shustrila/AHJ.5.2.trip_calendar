@@ -7,7 +7,6 @@
 html {
     height: 100%;
 }
-
 body {
     display: flex;
     flex-wrap: wrap;
@@ -17,18 +16,123 @@ body {
 }
 
 .form {
-    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    width: 450px;
     background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
 }
-.form__submit {
+.form__wrapper-date {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form__label {
+    flex-grow: 1;
+    position: relative;
+}
+.form__label-hidden {
+    display: none;
+}
+.form__calendar {
+    position: absolute;
+    bottom: 0;
+    left:  50%;
+    transform: translate(-50%, 100%);
+}
+.form__input {
     padding: 10px;
     width: 100%;
+    outline: transparent;
+    color: transparent;
+    cursor: default;
+    text-shadow: 0 0 0 #333;
+}
+.form__wrapper-buttons {
+    width: 100%;
+    margin-top: 20px;
+}
+.form__submit {
+    padding: 10px 0;
+    width: 100%;
+    font-size: 18px;
     background-color: red;
     color: #ffffff;
     cursor: pointer;
     border: 0;
+    outline: transparent;
 }
-
 .form__submit:hover {
     background-color: darkred;
+}
+
+
+.error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-101%);
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 250px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+.calendar__hidden {
+    display: none;
+}
+.calendar__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.calendar__toggle {
+    padding: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    outline: transparent;
+    cursor: pointer;
+}
+.calendar__toggle--hidden {
+    opacity: 0.1;
+    cursor: default;
+}
+.calendar__date {
+    flex-grow: 1;
+    text-align: center;
+}
+.calendar__table {
+    width: 100%;
+}
+.calendar__week {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.calendar__day {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.calendar__day--red {
+    background-color: red;
+    color: #ffffff;
+}
+.calendar__day--show:hover {
+    border: 2px solid red;
+    cursor: pointer;
+}
+.calendar__day--hidden {
+    color: #dddddd;
 }

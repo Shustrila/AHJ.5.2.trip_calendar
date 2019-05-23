@@ -8,6 +8,16 @@
         <title>Trip calendar</title>
     </head>
     <body>
-        <div data-widget="date-form"></div>
+        <form class="form" data-widget="date-form">
+            <div class="form__wrapper-date">
+                <label class="form__label">
+                    <input class="form__input" type="text" name="date-there" autocomplete="off" value="Туда:">
+                </label>
+                <label class="form__label form__label-hidden">
+                    <input class="form__input" type="text" name="date-back" autocomplete="off" value="Обратно:">
+                </label>
+            </div>
+            <input class="form__submit" type="submit" value="Подтвердить">
+        </form>
     </body>
 </html>
